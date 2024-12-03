@@ -1,0 +1,25 @@
+spring:
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      username: ${REDIS_USERNAME}
+      password: ${REDIS_PASSWORD}
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: ${MYSQL_DATASOURCE_URL}
+      username: ${MYSQL_USERNAME}
+      password: ${MYSQL_PASSWORD}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL}
+
+management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_SERVER_URL}
+  tracing:
+    sampling:
+      probability: 1.0
